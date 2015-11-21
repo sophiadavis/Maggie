@@ -19,15 +19,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
 
         self.beaconNotificationsManager.enableNotificationsForBeaconID(
             BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 41092, minor: 31320),
-            enterMessage: "Hello, world from beacon 1.",
-            exitMessage: "Goodbye, world from beacon 1."
+            enterMessage: "Hello,beacon 1.",
+            exitMessage: "Goodbye,beacon 1."
         )
         
         self.beaconNotificationsManager.enableNotificationsForBeaconID(
             BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 25496, minor: 36025),
-            enterMessage: "Hello, world from beacon 2.",
-            exitMessage: "Goodbye, world from beacon 2."
+            enterMessage: "Hello,beacon 2.",
+            exitMessage: "Goodbye,beacon 2."
         )
+        
+        self.beaconNotificationsManager.enableNotificationsForBeaconID(
+            BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 31711, minor: 64228),
+            enterMessage: "Hello,beacon 3.",
+            exitMessage: "Goodbye,beacon 3."
+        )
+        
+        self.beaconNotificationsManager.enableNotificationsForBeaconID(
+            BeaconID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D", major: 3147, minor: 37441),
+            enterMessage: "Hello,beacon 4.",
+            exitMessage: "Goodbye,beacon 4."
+        )
+        
+        self.beaconNotificationsManager.enableNotificationsForBeaconID(
+            BeaconID(UUIDString: "D0D3FA86-CA76-45EC-9BD9-6AF4104621A9", major: 59112, minor: 51776),
+            enterMessage: "enter DOOR",
+            exitMessage: "exit Door"
+        )
+        
+        self.beaconNotificationsManager.enableNotificationsForBeaconID(
+            BeaconID(UUIDString: "D0D3FA86-CA76-45EC-9BD9-6AF4F73B9E0C", major: 59603, minor: 39004),
+            enterMessage: "enter DOG",
+            exitMessage: "exit DOG"
+        )
+
 
         // NOTE: "exit" event has a built-in delay of 30 seconds, to make sure that the user has really exited the beacon's range. The delay is imposed by iOS and is non-adjustable.
 

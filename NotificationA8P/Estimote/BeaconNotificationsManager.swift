@@ -39,6 +39,10 @@ class BeaconNotificationsManager: NSObject, ESTBeaconManagerDelegate {
             self.showNotificationWithMessage(message)
         }
     }
+    
+    func beaconManager(manager: AnyObject, didDetermineState state: CLRegionState, forRegion region: CLBeaconRegion) {
+        NSLog("didDetermineState: \(state.rawValue), region: \(region)")
+    }
 
     private func showNotificationWithMessage(message: String) {
         let notification = UILocalNotification()
